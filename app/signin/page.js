@@ -112,7 +112,16 @@ function SignInContent() {
               </div>
             </div>
 
-
+            {/* Forgot + Remember */}
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
+              <label className="flex items-center gap-1.5 sm:gap-2 text-gray-600 cursor-pointer flex-shrink-0">
+                <input type="checkbox" className="rounded border-gray-300 text-emerald-600 focus:ring-emerald-500 w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                <span className="whitespace-nowrap">মনে রাখুন</span>
+              </label>
+              <Link href="#" className="text-emerald-600 hover:text-emerald-700 font-medium text-xs sm:text-sm whitespace-nowrap">
+                পাসওয়ার্ড ভুলে গেছেন?
+              </Link>
+            </div>
 
             {/* Login Button */}
             <button
