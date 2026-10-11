@@ -144,7 +144,35 @@ function ProfileContent() {
           </div>
         </div>
 
-
+        {/* Update Info Card */}
+        <div className="bg-bazar-card rounded-2xl border border-gray-200/80 p-6 md:p-10">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
+            তথ্য
+          </h3>
+          <form onSubmit={handleUpdate} className="space-y-5">
+            <div className="pl-4 md:pl-8">
+              <label className="block text-base font-medium text-gray-800 mb-2">
+                নাম
+              </label>
+              <input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3.5 bg-white border border-gray-300 rounded-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/20 transition-all text-gray-800 placeholder-gray-400 text-base"
+                placeholder="আপনার নাম"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3.5 rounded-xl transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-md shadow-emerald-900/20 border-b-4 border-emerald-800 hover:border-emerald-900 active:border-b-2 active:translate-y-0.5 text-base"
+            >
+              {loading ? "লোড হচ্ছে..." : "আপডেট"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
 
