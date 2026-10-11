@@ -122,7 +122,17 @@ function ProfileContent() {
                   className="hidden"
                 />
               </div>
-
+              <div>
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+                  {user.name || "ব্যবহারকারী"}
+                </h2>
+                <p className="text-gray-500 mt-1 text-base md:text-lg">
+                  {user.email}
+                </p>
+                <p className="text-xs text-gray-400 mt-2">
+                  প্রোফাইল পিকচার পরিবর্তন করতে ছবিতে ক্লিক করুন
+                </p>
+              </div>
             </div>
             <button
               onClick={handleSignOut}
